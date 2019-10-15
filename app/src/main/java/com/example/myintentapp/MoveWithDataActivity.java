@@ -18,7 +18,7 @@ public class MoveWithDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_move_with_data);
 
-        tvDataReceived = findViewById(R.id.btn_move_activity_data);
+        tvDataReceived = findViewById(R.id.tv_data_received);
 
         String name = getIntent().getStringExtra(EXTRA_NAME);
         int age = getIntent().getIntExtra(EXTRA_AGE, 0);

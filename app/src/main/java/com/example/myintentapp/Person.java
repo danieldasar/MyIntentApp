@@ -41,6 +41,9 @@ public class Person implements Parcelable {
         this.city = city;
     }
 
+    public Person() {
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -54,9 +57,6 @@ public class Person implements Parcelable {
         dest.writeString(this.city);
     }
 
-    public Person() {
-    }
-
     protected Person(Parcel in) {
         this.name = in.readString();
         this.age = in.readInt();
@@ -64,7 +64,7 @@ public class Person implements Parcelable {
         this.city = in.readString();
     }
 
-    public static final Parcelable.Creator<Person> CREATOR = new Parcelable.Creator<Person>() {
+    public static final Creator<Person> CREATOR = new Creator<Person>() {
         @Override
         public Person createFromParcel(Parcel source) {
             return new Person(source);

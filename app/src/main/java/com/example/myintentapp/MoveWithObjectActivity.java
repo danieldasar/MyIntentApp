@@ -15,10 +15,10 @@ public class MoveWithObjectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_move_with_object);
 
-        tvObject = findViewById(R.id.btn_move_activity_object);
+        tvObject = findViewById(R.id.tv_object_received);
 
         Person person = getIntent().getParcelableExtra(EXTRA_PERSON);
-        String text = "Name "+ person.getName()+",\n Email "+ person.getEmail() +",\n Age "+ person.getAge() +",\n City "+ person.getCity();
+        String text = "Name "+ person.getName()+",\nEmail "+ person.getEmail() +",\nAge "+ person.getAge() +",\nCity "+ person.getCity();
         tvObject.setText(text);
     }
 }
